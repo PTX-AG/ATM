@@ -8,7 +8,7 @@ the Mac's own sensors. Everything stays on your Mac.
   <img src="screenshots/performance-light.png" alt="ATM's Performance page: the device list on the left, the temperature graph and sensors by place on the right" width="900">
 </p>
 
-**Version 1.0.0 Beta** (build 2026.1110.2) · macOS 15 Sequoia or later ·
+**Version 1.0.0 Beta** (build 2026.1111.1) · macOS 15 Sequoia or later ·
 [Download](../../releases/latest) · [Release notes](RELEASE_NOTES.md)
 
 ## Download
@@ -17,8 +17,8 @@ Pick the package for your Mac. Both are signed with a Developer ID and notarized
 
 | Your Mac | Package | macOS |
 |---|---|---|
-| **Apple silicon** (M1, M2, M3, M4 and later) | `ATM-1.0.0-beta-2026.1110.2-arm64.dmg` | 15 Sequoia or later |
-| **Intel** | `ATM-1.0.0-beta-2026.1110.2-x86_64.dmg` | 15 Sequoia to 26 Tahoe |
+| **Apple silicon** (M1, M2, M3, M4 and later) | `ATM-1.0.0-beta-2026.1111.1-arm64.dmg` | 15 Sequoia or later |
+| **Intel** | `ATM-1.0.0-beta-2026.1111.1-x86_64.dmg` | 15 Sequoia to 26 Tahoe |
 
 Not sure which one you have? Open  › **About This Mac**. If the **Chip** line says Apple M-something, take
 Apple silicon. If it lists a **Processor** made by Intel, take Intel.
@@ -38,11 +38,13 @@ Wi-Fi details say how to allow it later.
 ## What it shows
 
 - **Menu bar.** Choose what sits in the menu bar: CPU, memory, network, disk, temperature, fans, power, battery,
-  Bluetooth device batteries, or a clock with extra time zones. Click it for a popup with the last minute of each.
+  CPU, GPU and memory frequency, Bluetooth device batteries, or a clock with extra time zones. Click it for a popup
+  with the last minute of each.
 - **Processes.** Every app and background process with CPU, memory, disk and network use, grouped the way Windows
   Task Manager does. End a task from the row menu.
-- **Performance.** Graphs for CPU (performance and efficiency cores), memory, each disk, each network interface,
-  the GPU, the Neural Engine and temperature, over the last 60 seconds, 5 minutes or hour.
+- **Performance.** Graphs for CPU (performance and efficiency cores, with their clocks), memory, each disk, each
+  network interface, the GPU, the Neural Engine and temperature, over the last 60 seconds, 5 minutes or hour.
+- **Run at login.** One switch in Settings › General opens ATM each time you log in.
 - **App history, Startup, Users, Details, Services.** Which apps used the Mac this session, what starts at login
   (turn your own login items off and on), who is signed in, and the full process list.
 - **Sensors.** Hundreds of temperature, fan, power, voltage and current sensors, with minimum, maximum, trend,
@@ -57,7 +59,7 @@ Wi-Fi details say how to allow it later.
 ATM can set fan speeds from the menu bar popup. That needs ATM's helper, a small tool that runs with administrator
 rights. ATM asks before installing it, and macOS asks you to approve it once in System Settings › General ›
 Login Items & Extensions. The helper also lets ATM show every process's use, including other users' and the
-system's. Fans go back to automatic when ATM quits. Without the helper, ATM only reads the fans and never changes
+system's, and on an Intel Mac the live CPU clock. Fans go back to automatic when ATM quits. Without the helper, ATM only reads the fans and never changes
 them, and everything else keeps working. You can remove it at any time in Settings › Privacy › Remove Helper.
 
 ## Privacy
