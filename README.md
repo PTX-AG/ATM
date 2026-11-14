@@ -8,7 +8,7 @@ the Mac's own sensors. Everything stays on your Mac.
   <img src="screenshots/performance-light.png" alt="ATM's Performance page: the device list on the left, the temperature graph and sensors by place on the right" width="900">
 </p>
 
-**Version 1.0.0 Beta** (build 2026.1111.1) · macOS 15 Sequoia or later ·
+**Version 1.0.0 Beta** (build 2026.1114.2) · macOS 15 Sequoia or later ·
 [Download](../../releases/latest) · [Release notes](RELEASE_NOTES.md)
 
 ## Download
@@ -17,8 +17,8 @@ Pick the package for your Mac. Both are signed with a Developer ID and notarized
 
 | Your Mac | Package | macOS |
 |---|---|---|
-| **Apple silicon** (M1, M2, M3, M4 and later) | `ATM-1.0.0-beta-2026.1111.1-arm64.dmg` | 15 Sequoia or later |
-| **Intel** | `ATM-1.0.0-beta-2026.1111.1-x86_64.dmg` | 15 Sequoia to 26 Tahoe |
+| **Apple silicon** (M1, M2, M3, M4 and later) | `ATM-1.0.0-beta-2026.1114.2-arm64.dmg` | 15 Sequoia or later |
+| **Intel** | `ATM-1.0.0-beta-2026.1114.2-x86_64.dmg` | 15 Sequoia to 26 Tahoe |
 
 Not sure which one you have? Open  › **About This Mac**. If the **Chip** line says Apple M-something, take
 Apple silicon. If it lists a **Processor** made by Intel, take Intel.
@@ -64,8 +64,9 @@ them, and everything else keeps working. You can remove it at any time in Settin
 
 ## Privacy
 
-- **No network.** ATM has no accounts, no analytics, no ads and no update checks. It opens no network
-  connections.
+- **Network only for updates, only if you allow it.** ATM uses the network only to check GitHub for updates, and
+  only after you allow it (Settings › General). It has no accounts, no analytics and no ads, and your readings stay
+  on this Mac.
 - **Read-only by default.** ATM reads sensors. It changes fan speeds only when you turn on fan control and set
   them, and it changes a login item only when you switch it.
 - **Honest values.** A value ATM can't read shows as "—", never as 0, and stale values are marked stale. Every
@@ -73,8 +74,13 @@ them, and everything else keeps working. You can remove it at any time in Settin
 
 ## Updates
 
-ATM doesn't check for updates. To update, download the new DMG from [Releases](../../releases/latest) and drag
-ATM onto Applications again, replacing the old copy. Your settings stay.
+From build 2026.1114.2, ATM can check GitHub for a newer build and show what's new, with Install, Skip This
+Version and Remind Me Later. Nothing is checked until you allow it: ATM asks on its second launch, and Settings ›
+General has the switch and a Check Now button. "Check for Updates…" is in the app menu and the menu bar's menu.
+ATM never installs an update without you, and it checks each one's signature first.
+
+Coming from build 2026.1111.1 or older, which have no update check, download the new DMG from
+[Releases](../../releases/latest) once and drag ATM onto Applications, replacing the old copy. Your settings stay.
 
 ## Uninstall
 
